@@ -9,9 +9,10 @@ const contacts = [
 ];
 
 function search() {
-  for (let i = 0; i < contacts.length; i++) {
-    if (input.value.toLocaleLowerCase() === contacts[i].name.toLowerCase()) {
-      p.innerHTML = `Contato encontrado - Nome: ${contacts[i].name} tel: ${contacts[i].number}`;
+  //   for (let i = 0; i < contacts.length; i++) {
+  for (const contatos of contacts) {
+    if (input.value.toLocaleLowerCase() === contatos.name.toLowerCase()) {
+      p.innerHTML = `Contato encontrado - Nome: ${contatos.name} tel: ${contatos.number}`;
       break;
     } else {
       p.innerHTML = "Contato não encontrado, tente novamente";
